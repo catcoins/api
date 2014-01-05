@@ -20,10 +20,6 @@ var pools = [{
   , url: 'http://cat.poolerino.com'
   , type: 'mpos'
 }, {
-    name: 'Catpool.pw'
-  , url: 'http://catpool.pw'
-  , type: 'mpos'
-}, {
     name: 'Argakiig.us'
   , url: 'http://cat.argakiig.us'
   , type: 'mpos'
