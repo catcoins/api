@@ -85,4 +85,4 @@ http.createServer(function (req, res) {
   });
 }).listen(3333, '127.0.0.1');
 
-console.log('Started Catpools :3');
+console.log('Started Catcoin API :3');
