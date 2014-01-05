@@ -52,7 +52,7 @@ var pools = [{
 var getData = function (next) {
   async.mapLimit(pools, 5, function (pool, next) {
     if (pool.type === 'mpos') {
-      request.get({ url: pool.url + '/index.php?page=api&action=public', json: true, timeout: 500 }, function (e, r, data) {
+      request.get({ url: pool.url + '/index.php?page=api&action=public', json: true, timeout: 1000 }, function (e, r, data) {
         next(null, {
             name: pool.name
           , url: pool.url
@@ -60,7 +60,7 @@ var getData = function (next) {
         });
       });
     } else if (pool.type === 'p2pool') {
-      request.get({ url: pool.url + '/global_stats', json: true, timeout: 500 }, function (e, r, data) {
+      request.get({ url: pool.url + '/global_stats', json: true, timeout: 1000 }, function (e, r, data) {
         next(null, {
             name: pool.name
           , url: pool.url
