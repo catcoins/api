@@ -56,11 +56,11 @@ var getData = function (next) {
         });
       });
     } else if (pool.type === 'p2pool') {
-      request.get({ url: pool.url + '/global_stats', json: true, timeout: 1000 }, function (e, r, data) {
+      request.get({ url: pool.url + '/local_stats', json: true, timeout: 1000 }, function (e, r, data) {
         next(null, {
             name: pool.name
           , url: pool.url
-          , hashrate: data && data.pool_hash_rate ? (Math.round(data.pool_hash_rate / 100000) / 10) : 0
+          , hashrate: data && data.miner_hash_rates ? (Math.round(Object.keys(data.miner_hash_rates).reduce(function (p, v) { return p + data.miner_hash_rates[v] }, 0) / 100000) / 10) : 0
         });
       });
     } else {
