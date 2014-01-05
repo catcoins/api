@@ -79,7 +79,7 @@ http.createServer(function (req, res) {
     if (data) { return res.end(data); }
     getData(function (err, data) {
       redis.set('pools', JSON.stringify(data), function () {});
-      redis.expire('pools', 60);
+      redis.expire('pools', 120);
       res.end(JSON.stringify(data));
     });
   });
