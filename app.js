@@ -16,14 +16,6 @@ var pools = [{
   , url: 'http://teamcatcoin.com'
   , type: 'mpos'
 }, {
-    name: 'Poolerino'
-  , url: 'http://cat.poolerino.com'
-  , type: 'mpos'
-}, {
-    name: 'Argakiig.us'
-  , url: 'http://cat.argakiig.us'
-  , type: 'mpos'
-}, {
     name: 'Mintpool.co'
   , url: 'http://cat.mintpool.co'
   , type: 'mpos'
